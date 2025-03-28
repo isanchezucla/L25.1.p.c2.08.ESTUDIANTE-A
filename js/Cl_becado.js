@@ -10,8 +10,15 @@ export default class Cl_becado extends Cl_estudiante {
         } else if (super.notaPromedio() >= 10) {
             this.beca = 20;
         } else {
-            this.beca = 0;
+            this.beca = "";
         }
         return this.beca;
+    }
+    convertirBecaString() {
+        if (this.notaPromedio() >= 10) {
+            return "recibe una beca de:";
+        } else {
+            return "no le corresponde beca.";
+        }
     }
 }

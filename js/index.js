@@ -29,19 +29,10 @@ salida.innerHTML = `Nombre del becado: ${becado.nombre}<br>
 Acumulado de notas: ${becado.acumuladoNotas}<br>
 Cantidad de materias: ${becado.cantidadMaterias}<br>
 Nota promedio: ${becado.notaPromedio().toFixed(2)}<br>
-`;
-if (becado.calcularBeca() > 0) {
-    salida.innerHTML += `${becado.nombre} recibe una beca de $${becado.calcularBeca().toFixed(2)}<br><br>`;
-} else {
-    salida.innerHTML += `${becado2.nombre} no le corresponde beca<br><br>`;
-}
+${becado.nombre} ${becado.convertirBecaString()} ${becado.calcularBeca().toFixed(2)}<br><br>`;
+
 salida.innerHTML += `Nombre del becado: ${becado2.nombre}<br>
 Acumulado de notas: ${becado2.acumuladoNotas}<br>
 Cantidad de materias: ${becado2.cantidadMaterias}<br>
 Nota promedio: ${becado2.notaPromedio().toFixed(2)}<br>
-`;
-if (becado2.calcularBeca() > 0) {
-    salida.innerHTML += `${becado2.nombre} recibe una beca de $${becado2.calcularBeca().toFixed(2)}<br><br>`;
-} else {
-    salida.innerHTML += `${becado2.nombre} no le corresponde beca<br><br>`;
-}
+${becado2.nombre} ${becado2.convertirBecaString()} ${becado2.calcularBeca()}<br>`;
